@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "demo1": "node examples/demo1.js",
+    "demo2": "node examples/demo2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Jirapo/modules-version-check/issues"
   },
-  "homepage": "https://github.com/Jirapo/modules-version-check#readme"
+  "homepage": "https://github.com/Jirapo/modules-version-check#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-any": "0.0.2",
+    "fs-extra": "^2.1.2",
+    "node-fetch": "^1.6.3"
+  }
 }

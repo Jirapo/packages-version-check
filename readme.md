@@ -1,13 +1,13 @@
 ## install
 
 ```
-npm i modules-version-check -S
+npm i packages-version-check -S
 ```
 
 ## usage
 
 ```
-const check = require('modules-version-check');
+const check = require('packages-version-check');
 
 check({ foloder: 'YOUR_PROJECT_FOLDER'})
   .then(res => {

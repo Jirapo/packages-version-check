@@ -3,8 +3,8 @@ const checkRegistry = require('../lib/checkRegistry');
 const assert = require('power-assert');
 
 const defaultRegistryUrls = [
-  'http://registry.npm.alibaba-inc.com',
   'https://registry.npm.taobao.org',
+  'http://registry.npm.alibaba-inc.com',
   'https://registry.npmjs.org'
 ];
 
@@ -27,7 +27,7 @@ describe('checkRegistry 异步测试', function() {
       });
   });
 
-  it('传入参数应该返回参数指定源', function(done){
+  it('传入正确源应该返回参数源', function(done){
     const r = 'https://registry.npm.taobao.org';
 
     checkRegistry(r)
@@ -38,7 +38,7 @@ describe('checkRegistry 异步测试', function() {
   });
 
   it('传入错误源应该返回默认源', function(done){
-    const r = 'http://registry.npm.taobao.org';
+    const r = 'http://registry.npm.taobao.com';
     
     checkRegistry(r)
       .then(function(res){

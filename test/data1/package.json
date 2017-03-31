@@ -1,0 +1,16 @@
+{
+  "name": "test-modules-version-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jirapo/modules-version-check.git"
+  },
+  "author": "Poling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jirapo/modules-version-check/issues"
+  },
+  "homepage": "https://github.com/Jirapo/modules-version-check#readme"
+}

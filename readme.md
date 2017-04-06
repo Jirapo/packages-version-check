@@ -43,5 +43,5 @@ check({ foloder: 'YOUR_PROJECT_FOLDER'})
 updateType: 'patch', 'major', 'minor', 'prerelease', 'null', 'build'
 
 ## image
-<img src="./demos/images/demo1.png" />
-<img src="./demos/images/test.png" />
+<img src="https://raw.githubusercontent.com/Jirapo/packages-version-check/master/demos/images/demo1.png" />
+<img src="https://raw.githubusercontent.com/Jirapo/packages-version-check/master/demos/images/test.png" />

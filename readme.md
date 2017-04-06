@@ -44,3 +44,4 @@ updateType: 'patch', 'major', 'minor', 'prerelease', 'null', 'build'
 
 ## image
 <img src="./demos/images/demo1.png" />
+<img src="./demos/images/test.png" />

@@ -1,3 +1,5 @@
+Check different verisons of packages from lastest version & versions in package.json & installed version.
+
 ## install
 
 ```

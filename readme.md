@@ -11,7 +11,7 @@ npm i packages-version-check -S
 ```
 const check = require('packages-version-check');
 
-check({ foloder: 'YOUR_PROJECT_FOLDER'})
+check({ foloder: 'YOUR_PROJECT_FOLDER', registry: 'YOUR_NPM_REGSITRY'})
   .then(res => {
     console.log(res);
   });

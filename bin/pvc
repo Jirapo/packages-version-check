@@ -1,0 +1,47 @@
+#! /usr/bin/env node
+
+const program = require('commander');
+const Table = require('cli-table2');
+const chalk = require('chalk');
+const check = require('../lib/check');
+
+program
+  .version('1.0.5')
+  .usage('[options] <input>')
+  .option('-f, --folder [folder]', 'project folder that contain package.json')
+  .option('-r, --registry [registry]', 'npm registry url')
+  .parse(process.argv);
+  ;
+
+const { registry, folder = process.cwd() } = program;
+
+console.log('registry %j, folder %j', registry, folder);
+const showTable = (data, type) => {
+  console.log(`${type} Table:\n`);
+
+  const table = new Table({
+    head: ['Dependence Name', 'Version', 'Custom Ver', 'Latest Ver', 'Update', 'Type'],
+    colWidths: [18, 10, 12, 12, 8, 8]
+  });
+
+  data.forEach(({name, version, installedVersion, latestVersion, needUpdate, updateType}) => {
+    table.push([name, version, installedVersion, latestVersion,
+      needUpdate ? chalk.green.bold('true') : 'false',
+      updateType]);
+  });
+  console.log(table.toString());
+};
+
+check({ folder, registry })
+  .then(res => {
+
+    if (res.dependencies) {
+      showTable(res.dependencies, 'Dependencies');
+    }
+
+    if (res.devDependencies) {
+      showTable(res.devDependencies, 'Dev Dependencies');
+    }
+
+    process.exit(0);
+  });

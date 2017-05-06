@@ -1,5 +1,4 @@
 const request = require('../lib/request');
-const checkRegistry = require('../lib/checkRegistry');
 const check = require('../lib/check');
 const assert = require('power-assert');
 const { join, resolve } = require('path');
